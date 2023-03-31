@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>TestCoche.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TestCoche.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">org.junit.jupiter.api.Assertions</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.junit.jupiter.api.Test</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">TestCoche {</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">test_al_crear_un_coche_su_velocidad_es_cero(){</span>
+        <span class="s1">Coche nuevoCoche = </span><span class="s0">new </span><span class="s1">Coche()</span><span class="s0">;</span>
+        <span class="s1">Assertions.assertEquals(</span><span class="s2">0</span><span class="s0">, </span><span class="s1">nuevoCoche.velocidad)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">test_al_acelerar_un_coche_su_velocidad_aumenta(){</span>
+        <span class="s1">Coche nuevoCoche = </span><span class="s0">new </span><span class="s1">Coche()</span><span class="s0">;</span>
+        <span class="s1">nuevoCoche.acelerar_Alba_Melgar(</span><span class="s2">30</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Assertions.assertEquals(</span><span class="s2">30</span><span class="s0">, </span><span class="s1">nuevoCoche.velocidad)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">test_al_decelerar_un_coche_su_velocidad_disminuye(){</span>
+        <span class="s1">Coche nuevoCoche = </span><span class="s0">new </span><span class="s1">Coche()</span><span class="s0">;</span>
+        <span class="s1">nuevoCoche.velocidad = </span><span class="s2">50</span><span class="s0">;</span>
+        <span class="s1">nuevoCoche.decelerar_Alba_Melgar(</span><span class="s2">20</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Assertions.assertEquals(</span><span class="s2">30</span><span class="s0">, </span><span class="s1">nuevoCoche.velocidad)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">test_al_decelerar_un_coche_su_velocidad_no_puede_ser_menor_que_cero(){</span>
+        <span class="s1">Coche nuevoCoche = </span><span class="s0">new </span><span class="s1">Coche()</span><span class="s0">;</span>
+        <span class="s1">nuevoCoche.velocidad = </span><span class="s2">50</span><span class="s0">;</span>
+        <span class="s1">nuevoCoche.decelerar_Alba_Melgar(</span><span class="s2">80</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Assertions.assertEquals(</span><span class="s2">0</span><span class="s0">, </span><span class="s1">nuevoCoche.velocidad)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
